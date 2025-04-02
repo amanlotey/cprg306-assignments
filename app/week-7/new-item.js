@@ -11,17 +11,17 @@ export default function NewItem({ onAddItem }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    if (!name.trim()) return; // Prevent adding empty items
+    if (!name.trim()) return; 
 
     const newItem = {
-      id: Date.now().toString(), // Generate unique ID
+      id: Date.now().toString(), 
       name,
       quantity,
       category
     };
 
-    onAddItem(newItem); // Pass new item to parent
-    setName(""); // Reset input fields
+    onAddItem(newItem); 
+    setName("");
     setQuantity(1);
     setCategory("Produce");
   };

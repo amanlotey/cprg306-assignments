@@ -5,7 +5,7 @@ import Item from "./item";
 export default function ItemList({ items }) {
   const [sortBy, setSortBy] = useState("name");
 
-  // Create a sorted copy of items
+  
   const sortedItems = [...items].sort((a, b) =>
     sortBy === "name" ? a.name.localeCompare(b.name) : a.category.localeCompare(b.category)
   );
